@@ -1,3 +1,6 @@
+const semi = ['error', 'never']
+
+
 module.exports = {
   env: {
     browser: true,
@@ -7,6 +10,10 @@ module.exports = {
   extends: [
     'plugin:react/recommended',
     'airbnb',
+    'airbnb-typescript',
+    'plugin:import/errors',
+    'plugin:import/warnings',
+    'plugin:import/typescript'
   ],
   globals: {
     Atomics: 'readonly',
@@ -25,6 +32,8 @@ module.exports = {
     '@typescript-eslint',
   ],
   rules: {
-    semi: ['never']
+    semi,
+    '@typescript-eslint/semi': semi,
+    'import/newline-after-import': ['error', { count: 2 }]
   },
 };
