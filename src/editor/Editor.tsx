@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
 
 
-type MarkdownTypes = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'img' | 'p' // TODO: Add remaining supported markdown types
-
 interface EditorProps {
   initialDoc?: string[] // TODO: What data structure should be used to keep track of document lines?
 }
